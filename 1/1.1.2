@@ -1,0 +1,26 @@
+#include<bits/stdc++.h>
+ 
+// using namespace std;
+ 
+void solve(){
+    std::map<std::string,int> sizes;
+   
+    sizes.insert({"integer",4});
+    sizes["long"]=8;
+    sizes["float"]=4;
+    sizes["double"]=8;
+    sizes["character"]=1;
+ 
+    std::string dataType;
+    std::cin>>dataType;
+ 
+    transform(dataType.begin(), dataType.end(), dataType.begin(), ::tolower);
+    // std::cout<<sizes.at(dataType);
+    std::cout<<sizes[dataType];
+}
+ 
+int main(){
+    solve();
+    return 0;
+}
+has context menu
